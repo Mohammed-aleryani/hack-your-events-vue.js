@@ -5,13 +5,11 @@ import {useEventsStore} from '@/stores/useEventsStore';
 
 const events=useEventsStore();
 
-let searchValue =ref('') ;
-
 const handleSearchChange = (e) => {
     let searchTimeoutToken = 0;
 
     searchTimeoutToken = setTimeout(async () => {
-      events.fetchEvents(e.target.value);
+      events.fetchEvents({keyword:e.target.value});
     }, 1000);}
 
 </script>
