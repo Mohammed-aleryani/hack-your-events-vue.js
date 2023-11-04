@@ -1,4 +1,6 @@
 <script setup>
+import SearchInput from './SearchInput.vue';
+
 
 
 </script>
@@ -8,29 +10,18 @@
         <div class="p-2  flex justify-around items-center h-full ">
             <h1 class="text-3xl font-bold">HackYourEvents</h1>
 
+            <SearchInput class="text-black"/>
 
-            <div class="">
-                <input
-                        type="text"
-                        id="search"
-                        placeholder="Search events..."
-                        class="rounded me-2"
-                />
-                <button> <i><font-awesome-icon :icon="['fas', 'magnifying-glass']" style="color: #ffffff;" /></i></button>
-            </div>
-            
             <div class="flex-row justify-between place-content-center	">
                 <RouterLink class="mx-1" to="/">Home</RouterLink>
                 <RouterLink class="mx-1" to="/Favorite">Favorite</RouterLink>
                 <RouterLink class="mx-1" to=#>Contactus</RouterLink>
             </div>
         </div>
-        
-       
+
+
 
     </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
