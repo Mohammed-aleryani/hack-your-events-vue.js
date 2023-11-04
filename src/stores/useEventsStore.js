@@ -10,9 +10,11 @@ export const useEventsStore = defineStore('events', {
   },
 
   actions: {
-    async fetchEvents(search='') {
+    async fetchEvents({keyword='', id=null}={}) {
 
-      const url = `https://app.ticketmaster.com/discovery/v2/events.json?size=21&keyword=${search}&countryCode=NL&apikey=${apiKey}`
+      const url = `https://app.ticketmaster.com/discovery/v2/events.json?size=21${keyword!=''?`&keyword=${keyword}`:''}&${id!=null?`id=${id}&`:''}countryCode=NL&apikey=${apiKey}`
+      console.log(url);
+     
       return await fetch(url)
         .then((res) => res.json())
         .then((result) => (this.events = result?._embedded?.events))
