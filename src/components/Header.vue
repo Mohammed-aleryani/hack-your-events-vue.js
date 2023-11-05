@@ -1,7 +1,9 @@
 <script setup>
 import SearchInput from './SearchInput.vue';
+import { useRoute } from 'vue-router';
 
 
+const routeName=useRoute().name
 
 </script>
 
@@ -16,9 +18,9 @@ import SearchInput from './SearchInput.vue';
             <SearchInput class="text-black" />
 
             <div class="flex-row justify-between place-content-center	">
-                <RouterLink class="mx-1" to="/">Home</RouterLink>
-                <RouterLink class="mx-1" to="/Favorites">Favorite</RouterLink>
-                <a class="mx-1" href="#footer">Contact us</a>
+                <RouterLink class="mx-2" :class="routeName=='home'?'text-gray-600':''"  to="/">Home</RouterLink>
+                <RouterLink class="mx-2" :class="routeName=='favorites'?'text-gray-600':''"  to="/Favorites">Favorite</RouterLink>
+                <a class="mx-2" href="#footer">Contact us</a>
             </div>
         </div>
 
