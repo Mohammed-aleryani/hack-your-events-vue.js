@@ -8,8 +8,6 @@ const events=useEventsStore()
 const route=useRoute()
 const id=route.params.id;
 events.fetchEvents({id:id})
-console.log(events.events.length);
-console.log(events.events);
 
 
 </script>
