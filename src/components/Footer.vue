@@ -4,7 +4,7 @@
 
 <template>
     <footer class="bg-gray-900 text-white text-center py-3">
-        <div class="w-9/12 m-auto">
+        <div class="w-9/12 m-auto" id="footer">
             <p>
                 This app is a homework project for HackYourFuture program
             </p>

@@ -17,8 +17,8 @@ import SearchInput from './SearchInput.vue';
 
             <div class="flex-row justify-between place-content-center	">
                 <RouterLink class="mx-1" to="/">Home</RouterLink>
-                <RouterLink class="mx-1" to="/Favorite">Favorite</RouterLink>
-                <RouterLink class="mx-1" to=#>Contactus</RouterLink>
+                <RouterLink class="mx-1" to="/Favorites">Favorite</RouterLink>
+                <a class="mx-1" href="#footer">Contact us</a>
             </div>
         </div>
 
